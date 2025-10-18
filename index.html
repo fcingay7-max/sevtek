@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEVTEK Teknik Servis - Profesyonel Hizmet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo" onclick="scrollToTop()">
+                    <i class="fas fa-tools"></i>
+                    <span>SEVTEK</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link">Hizmetlerimiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#appliances" class="nav-link">Beyaz Eşyalar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">İletişim</a>
+                    </li>
+                </ul>
+                <div class="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-pattern"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-star"></i>
+                <span>15+ Yıl Deneyim</span>
+            </div>
+            <h1 class="hero-title">Beyaz Eşya Teknik Servis</h1>
+            <p class="hero-subtitle">Profesyonel, güvenilir ve hızlı teknik servis hizmeti</p>
+            <div class="hero-features">
+                <div class="feature-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Hızlı Servis</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Garanti</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-home"></i>
+                    <span>Evde Servis</span>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToCallback()">
+                    <i class="fas fa-phone-alt"></i>
+                    Biz Sizi Arayalım!
+                </button>
+                <button class="btn btn-secondary" onclick="scrollToServices()">
+                    <i class="fas fa-wrench"></i>
+                    Hizmetlerimiz
+                </button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="appliance-showcase">
+                <div class="appliance-item">
+                    <div class="appliance-image">
+                        <img src="images/hero-washing-machine.jpg" alt="Çamaşır Makinesi" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                    </div>
+                    <span>Çamaşır Makinesi</span>
+                </div>
+                <div class="appliance-item">
+                    <div class="appliance-image">
+                        <img src="images/hero-dishwasher.jpg" alt="Bulaşık Makinesi" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                    </div>
+                    <span>Bulaşık Makinesi</span>
+                </div>
+                <div class="appliance-item">
+                    <div class="appliance-image">
+                        <img src="images/hero-refrigerator.jpg" alt="Buzdolabı" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder">
+                            <i class="fas fa-snowflake"></i>
+                        </div>
+                    </div>
+                    <span>Buzdolabı</span>
+                </div>
+                <div class="appliance-item">
+                    <div class="appliance-image">
+                        <img src="images/hero-oven.jpg" alt="Fırın" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                    </div>
+                    <span>Fırın</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Hizmetlerimiz</h2>
+            <p class="section-subtitle">Tüm beyaz eşya markaları için profesyonel teknik servis</p>
+            
+            <div class="services-grid">
+                <div class="service-card" onclick="openServiceModal('diagnosis')">
+                    <div class="service-image">
+                        <img src="images/service-diagnosis.png" alt="Arıza Tespiti" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                    </div>
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Arıza Tespiti</h3>
+                    <p>Uzman teknisyenlerimizle hızlı ve doğru arıza tespiti</p>
+                    <div class="service-action">
+                        <span>Detayları Gör <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+                
+                <div class="service-card" onclick="openServiceModal('repair')">
+                    <div class="service-image">
+                        <img src="images/service-repair.jpg" alt="Tamir ve Bakım" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                    </div>
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Tamir ve Bakım</h3>
+                    <p>Orijinal yedek parçalarla kaliteli tamir hizmeti</p>
+                    <div class="service-action">
+                        <span>Detayları Gör <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+                
+                <div class="service-card" onclick="openServiceModal('home-service')">
+                    <div class="service-image">
+                        <img src="images/service-home.jpg" alt="Evde Servis" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                    </div>
+                    <div class="service-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Evde Servis</h3>
+                    <p>Kapınıza kadar gelen profesyonel servis hizmeti</p>
+                    <div class="service-action">
+                        <span>Detayları Gör <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+                
+                <div class="service-card" onclick="openServiceModal('warranty')">
+                    <div class="service-image">
+                        <img src="images/service-warranty.png" alt="Garanti" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </div>
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Garanti</h3>
+                    <p>Tüm tamir işlemlerimiz garanti kapsamındadır</p>
+                    <div class="service-action">
+                        <span>Detayları Gör <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appliances Section -->
+    <section id="appliances" class="appliances">
+        <div class="container">
+            <h2 class="section-title">Servis Verdiğimiz Beyaz Eşyalar</h2>
+            <p class="section-subtitle">Tüm marka ve modeller için teknik servis</p>
+            
+            <div class="appliances-grid">
+                <div class="appliance-category">
+                    <div class="category-image">
+                        <img src="images/washing-machine.jpg" alt="Çamaşır Makinesi" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder">
+                            <i class="fas fa-tshirt"></i>
+                            <span>Çamaşır Makinesi Görseli</span>
+                        </div>
+                    </div>
+                    <div class="category-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Çamaşır Makinesi</h3>
+                    <ul>
+                        <li>Arçelik, Beko, Bosch</li>
+                        <li>Siemens, Samsung, LG</li>
+                        <li>Vestel, Profilo, Indesit</li>
+                    </ul>
+                </div>
+                
+                <div class="appliance-category">
+                    <div class="category-image">
+                        <img src="images/dishwasher.jpg" alt="Bulaşık Makinesi" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder">
+                            <i class="fas fa-utensils"></i>
+                            <span>Bulaşık Makinesi Görseli</span>
+                        </div>
+                    </div>
+                    <div class="category-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Bulaşık Makinesi</h3>
+                    <ul>
+                        <li>Arçelik, Beko, Bosch</li>
+                        <li>Siemens, Samsung, LG</li>
+                        <li>Vestel, Profilo, Indesit</li>
+                    </ul>
+                </div>
+                
+                <div class="appliance-category">
+                    <div class="category-image">
+                        <img src="images/refrigerator.jpg" alt="Buzdolabı" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder">
+                            <i class="fas fa-snowflake"></i>
+                            <span>Buzdolabı Görseli</span>
+                        </div>
+                    </div>
+                    <div class="category-icon">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <h3>Buzdolabı</h3>
+                    <ul>
+                        <li>Arçelik, Beko, Bosch</li>
+                        <li>Siemens, Samsung, LG</li>
+                        <li>Vestel, Profilo, Indesit</li>
+                    </ul>
+                </div>
+                
+                <div class="appliance-category">
+                    <div class="category-image">
+                        <img src="images/oven.jpg" alt="Fırın & Ocak" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder">
+                            <i class="fas fa-fire"></i>
+                            <span>Fırın & Ocak Görseli</span>
+                        </div>
+                    </div>
+                    <div class="category-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Fırın & Ocak</h3>
+                    <ul>
+                        <li>Arçelik, Beko, Bosch</li>
+                        <li>Siemens, Samsung, LG</li>
+                        <li>Vestel, Profilo, Indesit</li>
+                    </ul>
+                </div>
+                
+                <div class="appliance-category">
+                    <div class="category-image">
+                        <img src="images/air-conditioner.jpg" alt="Klima" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder">
+                            <i class="fas fa-wind"></i>
+                            <span>Klima Görseli</span>
+                        </div>
+                    </div>
+                    <div class="category-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h3>Klima</h3>
+                    <ul>
+                        <li>Arçelik, Beko, Bosch</li>
+                        <li>Siemens, Samsung, LG</li>
+                        <li>Vestel, Profilo, Indesit</li>
+                    </ul>
+                </div>
+                
+                <div class="appliance-category">
+                    <div class="category-image">
+                        <img src="images/dryer.jpg" alt="Çamaşır Kurutma" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder">
+                            <i class="fas fa-tint"></i>
+                            <span>Çamaşır Kurutma Görseli</span>
+                        </div>
+                    </div>
+                    <div class="category-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Çamaşır Kurutma</h3>
+                    <ul>
+                        <li>Arçelik, Beko, Bosch</li>
+                        <li>Siemens, Samsung, LG</li>
+                        <li>Vestel, Profilo, Indesit</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Hakkımızda</h2>
+                    <p>15 yıllık deneyimimizle beyaz eşya sektöründe güvenilir teknik servis hizmeti sunuyoruz. Uzman teknisyen kadromuz ve kaliteli yedek parçalarımızla müşteri memnuniyetini ön planda tutuyoruz.</p>
+                    
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>15+</h3>
+                            <p>Yıl Deneyim</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>5000+</h3>
+                            <p>Mutlu Müşteri</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>24/7</h3>
+                            <p>Destek Hattı</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-image-container">
+                        <img src="images/technician.jpg" alt="Uzman Teknisyen" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Uzman Teknisyen Görseli</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call Back Section -->
+    <section class="callback-section">
+        <div class="container">
+            <div class="callback-content">
+                <div class="callback-text">
+                    <h2>📞 Biz Sizi Arayalım!</h2>
+                    <p class="callback-subtitle">Numaranızı bırakın, uzman teknisyenlerimiz sizi arayıp arızanızı çözelim</p>
+                    <div class="callback-features">
+                        <div class="feature-item">
+                            <i class="fas fa-clock"></i>
+                            <span>15 dakika içinde arayalım</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Uzman teknisyen desteği</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Ücretsiz arıza tespiti</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="callback-form">
+                    <form id="callbackForm" action="https://formspree.io/f/xvgwljyg" method="POST">
+                        <h3>Hızlı Geri Arama</h3>
+                        <div class="form-group">
+                            <input type="text" id="callbackName" name="name" placeholder="Adınız Soyadınız" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="callbackPhone" name="phone" placeholder="Telefon Numaranız" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="callbackEmail" name="email" placeholder="E-posta Adresiniz (Opsiyonel)">
+                        </div>
+                        <div class="form-group">
+                            <select id="callbackAppliance" name="appliance" required>
+                                <option value="">Beyaz Eşya Seçiniz</option>
+                                <option value="washing-machine">Çamaşır Makinesi</option>
+                                <option value="dishwasher">Bulaşık Makinesi</option>
+                                <option value="refrigerator">Buzdolabı</option>
+                                <option value="oven">Fırın</option>
+                                <option value="air-conditioner">Klima</option>
+                                <option value="dryer">Çamaşır Kurutma</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="callbackMessage" name="message" placeholder="Arıza Açıklaması (Opsiyonel)" rows="3"></textarea>
+                        </div>
+                        <input type="hidden" name="_subject" value="Geri Arama Talebi - Teknik Servis">
+                        <input type="hidden" name="_replyto" value="">
+                        <input type="hidden" name="_next" value="?callback=true">
+                        <button type="submit" class="btn btn-callback">
+                            <i class="fas fa-phone-alt"></i>
+                            Hemen Arayın!
+                        </button>
+                        <p class="callback-note">📱 15 dakika içinde sizi arayacağız</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">İletişim</h2>
+            <p class="section-subtitle">7/24 ulaşabileceğiniz iletişim kanallarımız</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefon</h4>
+                            <p>0539 260 77 64</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>E-posta</h4>
+                            <p>sevtek@teknikservis.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Adres</h4>
+                            <p>Taşoluk Mahallesi Arnavutköy İSTANBUL</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Çalışma Saatleri</h4>
+                            <p>Pazartesi - Pazar: 08:00 - 20:00</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Hızlı İletişim</h3>
+                    <form id="contactForm" action="https://formspree.io/f/xvgwljyg" method="POST">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Adınız Soyadınız" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Telefon Numaranız" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="E-posta Adresiniz" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="appliance" name="appliance" required>
+                                <option value="">Beyaz Eşya Seçiniz</option>
+                                <option value="washing-machine">Çamaşır Makinesi</option>
+                                <option value="dishwasher">Bulaşık Makinesi</option>
+                                <option value="refrigerator">Buzdolabı</option>
+                                <option value="oven">Fırın</option>
+                                <option value="air-conditioner">Klima</option>
+                                <option value="dryer">Çamaşır Kurutma</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Arıza Açıklaması" rows="4"></textarea>
+                        </div>
+                        <input type="hidden" name="_subject" value="Yeni İletişim Formu - Teknik Servis">
+                        <input type="hidden" name="_replyto" value="">
+                        <input type="hidden" name="_next" value="?success=true">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Gönder
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TeknikServis</h3>
+                    <p>Beyaz eşya teknik servisinde güvenilir çözüm ortağınız</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Hizmetler</h4>
+                    <ul>
+                        <li><a href="#services">Arıza Tespiti</a></li>
+                        <li><a href="#services">Tamir & Bakım</a></li>
+                        <li><a href="#services">Evde Servis</a></li>
+                        <li><a href="#services">Garanti</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Beyaz Eşyalar</h4>
+                    <ul>
+                        <li><a href="#appliances">Çamaşır Makinesi</a></li>
+                        <li><a href="#appliances">Bulaşık Makinesi</a></li>
+                        <li><a href="#appliances">Buzdolabı</a></li>
+                        <li><a href="#appliances">Fırın & Ocak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>İletişim</h4>
+                    <p><i class="fas fa-phone"></i> 0539 260 77 64</p>
+                    <p><i class="fas fa-envelope"></i> sevtek@teknikservis.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SEVTEK Teknik Servis. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Service Detail Modal -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content service-modal">
+            <span class="close">&times;</span>
+            <div class="service-detail">
+                <div class="service-header">
+                    <div class="service-icon-large">
+                        <i id="serviceIcon"></i>
+                    </div>
+                    <div class="service-info">
+                        <h2 id="serviceTitle"></h2>
+                        <p id="serviceDescription"></p>
+                    </div>
+                </div>
+                
+                <div class="service-content">
+                    <div class="service-process">
+                        <h3>Süreç</h3>
+                        <div class="process-steps" id="serviceProcess">
+                            <!-- Process steps will be loaded here -->
+                        </div>
+                    </div>
+                    
+                    <div class="service-features">
+                        <h3>Özellikler</h3>
+                        <div class="features-list" id="serviceFeatures">
+                            <!-- Features will be loaded here -->
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="service-actions">
+                    <button class="btn btn-primary" onclick="callPhone()">
+                        <i class="fas fa-phone-alt"></i>
+                        Hemen Arayın
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Fixed Call Button -->
+    <div id="fixedCallButton" class="fixed-call-button">
+        <div class="call-content">
+            <div class="call-icon">
+                <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="call-text">
+                <span class="call-title">Bizi Arayın!</span>
+                <span class="call-subtitle">7/24 Destek</span>
+            </div>
+            <div class="call-action">
+                <button class="call-btn" onclick="callPhone()">
+                    <i class="fas fa-phone"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
